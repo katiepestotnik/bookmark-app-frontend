@@ -10,7 +10,7 @@ No installation is required, please see usage for the link to the Bookmark'd app
 
 ## Usage
 
-<a href="http://example.com/" target="_blank">Hello, world!</a>
+<a href="https://bookmark-app-backend.herokuapp.com/">Click here to use Bookmark'd</a>
 
 ## Component Tree
 
