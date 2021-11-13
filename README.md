@@ -24,7 +24,7 @@ Click here [insert Heroku link later] to use Bookmark'd.
 
 - React
 
-## Link to Backend Repository
+## Backend Repository
 
 INSERT BACKEND LINK HERE
 
