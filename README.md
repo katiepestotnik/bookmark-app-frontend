@@ -12,7 +12,9 @@ No installation is required, please see usage for the link to the Bookmark'd app
 
 [Click here](https://bookmark-app-backend.herokuapp.com/) to use Bookmark'd.
 
+## Component Tree
 
+<img src="./Component.png" alt="component tree">
 
 ## Technologies used
 
