@@ -4,9 +4,9 @@
 
 - Javascript
 
---HTML
+- HTML
 
---CSS
+- CSS
 
---React
+- React
 
