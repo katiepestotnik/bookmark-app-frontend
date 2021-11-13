@@ -39,8 +39,7 @@ React Router Table
 
 ## Backend Repository
 
-[Bookmark'd Repository link](https://github.com/katiepestotnik/bookmark-app-backend){:target="_blank"}
-
+[Bookmark'd Repository link](https://github.com/katiepestotnik/bookmark-app-backend)
 
 Created with care by Gianelle, Katie, Lydia
 
