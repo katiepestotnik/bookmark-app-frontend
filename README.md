@@ -2,11 +2,11 @@
 
 <h1>Technologies used:</h1>
 
--- Javascript
+--Javascript
 
--- HTML
+--HTML
 
--- CSS
+--CSS
 
--- React
+--React
 
