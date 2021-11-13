@@ -14,7 +14,7 @@ Click here [insert Heroku link later] to use Bookmark'd.
 
 
 
-<h1>Technologies used:</h1>
+## Technologies used
 
 - Javascript
 
