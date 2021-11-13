@@ -1,6 +1,6 @@
 #Bookmark APP
 
-Technologies used:
+<h1>Technologies used:</h1>
 
 -Javascript
 
