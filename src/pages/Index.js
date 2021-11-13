@@ -5,13 +5,13 @@ import {Link} from "react-router-dom"
 //create a function that will take in props
 function Index(props) {
     //create state to hold bookmark data
-    const [newBookmark, setNewBookmark] = useState({
+    const [newBookmark, setBookmark] = useState({
         title: "",
         url: "",
   });
 //   create handleChange function for bookmarks
   const handleChange = (event) => {
-      setNewBookmark({ ...newBookmark, [event.target.name]: event.target.value });
+      setBookmark({ ...newBookmark, [event.target.name]: event.target.value });
   };
 
   //create handle submit function for bookmarks
@@ -19,8 +19,8 @@ function Index(props) {
   //to clear after creating the new bookmark
   const handleSubmit = (event) => {
     event.preventDefault(); //prevent refresh
-    props.createNewBookmark(newBookmark);
-    setNewBookmark({
+    props.createBookmark(newBookmark);
+    setBookmark({
         title: "",
         url: "",
     });
