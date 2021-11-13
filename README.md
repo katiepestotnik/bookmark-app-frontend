@@ -10,7 +10,7 @@ No installation is required, please see usage for the link to the Bookmark'd app
 
 ## Usage
 
-Click here [insert Heroku link later] to use Bookmark'd.
+Click here [insert Heroku link later](https://bookmark-app-backend.herokuapp.com/) to use Bookmark'd.
 
 
 
