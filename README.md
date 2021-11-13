@@ -29,7 +29,5 @@ Click here [insert Heroku link later] to use Bookmark'd.
 INSERT BACKEND LINK HERE
 
 
-<h3>Contributors</h3>
-
-Gianelle, Katie, Lydia
+Created with care by Gianelle, Katie, Lydia
 
