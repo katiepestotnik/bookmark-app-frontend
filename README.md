@@ -12,5 +12,6 @@
 
 
 <h3>Contributors</h3>
+
 Gianelle, Katie, Lydia
 
