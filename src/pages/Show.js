@@ -11,7 +11,7 @@ function Show(props) {
     const id = props.match.params.id;
 
     //save bookmarks as variable to make it easier
-    const bookmarks = props.bookmarks;
+    const bookmarks = props.bookmark;
 
     //we are in the Show function, so now find the individual bookmark to show
     const bookmark = bookmarks.find((specificBookmark) => {
