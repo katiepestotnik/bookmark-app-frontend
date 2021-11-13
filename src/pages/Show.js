@@ -44,12 +44,13 @@ function Show(props) {
     //with displayed bookmark info, i.e. a few static headers
     //add a button option for removing bookmark
     //on submit, want to edit values of title and url to update bookmark
-    return <div className='bookmark'>
-        <h1>{bookmark.title}</h1>
-        <h2>{bookmark.url}</h2>
-        <button onClick={removeBookmark}id="delete">Delete Bookmark</button>
+    return <section className='full-page-style'>
+        <h1 className="show-headers">{bookmark.title}</h1>
+        <h2 className="show-headers">{bookmark.url}</h2>
+        <button onClick={removeBookmark}id="delete" className="button-style">Delete Bookmark</button>
         <form onSubmit={handleSubmit}>
             <input
+                className="input-style"
                 type="text"
                 value={editBookmark.title}
                 name="title"
@@ -57,6 +58,7 @@ function Show(props) {
                 onChange={handleChange}
             />
             <input
+                className="input-style"
                 type="text"
                 value={editBookmark.url}
                 name="url"
@@ -64,12 +66,13 @@ function Show(props) {
                 onChange={handleChange}
             />
             <input
+                className="button-style"
                 type="submit"
                 value="update"
                 name="submit"
             />
         </form>
-    </div>
+    </section>
 } 
     
 export default Show

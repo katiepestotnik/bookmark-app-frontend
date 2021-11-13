@@ -42,9 +42,10 @@ function Index(props) {
 
   //want to return the title and url of new bookmark
   return (
-    <section>
+    <section className="full-page-style">
       <form onSubmit={handleSubmit}>
         <input
+          className="input-style"
           type="text"
           value={newBookmark.title}
           name="title"
@@ -52,6 +53,7 @@ function Index(props) {
           onChange={handleChange}
         />
         <input
+          className="input-style"
           type="text"
           value={newBookmark.url}
           name="url"
@@ -59,7 +61,7 @@ function Index(props) {
           onChange={handleChange}
         />
     
-        <input type="submit" value="Add Bookmark" />
+        <input className="button-style"type="submit" value="Add Bookmark" />
       </form>
       {props.bookmark ? loaded() : loading()}
     </section>
