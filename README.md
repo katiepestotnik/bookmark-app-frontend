@@ -20,11 +20,11 @@ React Router Table
 
     -> App
       -> Header
-      -> Main |state: bookmarks|
+      -> Main |state: bookmark|
         -> Switch
           -> Route |path: "/"|
             -> Index |Props: bookmark, createBookmark|
-          -> Route |path="/bookmarks/:id|
+          -> Route |path="/bookmark/:id|
             -> Show |Props: bookmark, updateBookmark, deleteBookmark|
 
 ## Technologies used
