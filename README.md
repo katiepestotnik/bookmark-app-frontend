@@ -23,9 +23,9 @@ React Router Table
       -> Main |state: bookmarks|
         -> Switch
           -> Route |path: "/"|
-            -> Index |Props: bookmarks, createBookmark|
+            -> Index |Props: bookmark, createBookmark|
           -> Route |path="/bookmarks/:id|
-            -> Show |Props: bookmarks, updateBookmark, deleteBookmark|
+            -> Show |Props: bookmark, updateBookmark, deleteBookmark|
 
 ## Technologies used
 
