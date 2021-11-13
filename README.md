@@ -18,7 +18,14 @@ No installation is required, please see usage for the link to the Bookmark'd app
 
 React Router Table 
 
-    code test
+    -> App
+      -> Header
+      -> Main |state: bookmarks|
+        -> Switch
+          -> Route |path: "/"|
+            -> Index |Props: bookmarks, createBookmark|
+          -> Route |path="/bookmarks/:id|
+            -> Show |Props: bookmarks, updateBookmarks, deleteBookmarks|
 
 ## Technologies used
 
