@@ -28,11 +28,13 @@ function Index(props) {
 
  //next, loaded fxn
   const loaded = () => {
-    return props.bookmark.map((bookmark) => (
-      <div className="bookmark" key={bookmark._id}>
-        <Link to={`/bookmark/${bookmark._id}`}><h1>{bookmark.title}</h1></Link>
+    return <section className="container">{props.bookmark.map((bookmark) => (
+      <div key={bookmark._id}>
+        <Link to={`/bookmark/${bookmark._id}`} className="container-links"><h1>{bookmark.title}</h1></Link>
       </div>
-    ));
+      ))
+      }
+      </section>
   };
 
   //loading function
