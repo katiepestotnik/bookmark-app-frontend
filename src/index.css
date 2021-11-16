@@ -14,7 +14,13 @@ code {
 }
 
 .nav {
-  background-color: red;
+  background: linear-gradient(#43978D, #092027);
+  height: 50px;
+
+}
+.nav-background {
+  padding: 20px 0;
+  background-color: #27505A;
 }
 .input-style{
 
@@ -22,25 +28,122 @@ code {
 .button-style{
 
 }
+.title{
+  color: #F9E07F;
+  text-decoration: none;
+  font-size: 2em;
+  font-family: 'Manrope', sans-serif;
+  display: inline-block;
+  padding-bottom: 10px;
+}
 .full-page-style{
-
+  background: linear-gradient(#264D59, #43978D, #264D59);
+  height: 100vh;
 }
 .show-headers{
-
+  background: linear-gradient(#F9E07F,#F9AD6A 10%, #F9E07F);
+  color: #264D59;
+  padding: 5px;
+  width: 60%;
+  margin: 10 auto;
+  border-radius: 10px;
+}
+.show-background{
+  height: 150px;
+  background: linear-gradient(#264D59, #43978D, #264D59);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  display: block;
+  padding: 10px;
+  background: linear-gradient(#F9AD6A,#F9E07F, #F9E07F, #F9AD6A);
+  width: 70%;
+  margin: 10px auto;
+  border-radius: 5% / 50%;
+}
+.container-links{
+  text-decoration:none;
+  color: #264D59;
+  font-size: 1em;
+  font-family: 'Manrope', sans-serif;
 }
 /* phones */
 @media only screen and (min-width: 576px){
+  .container-links{
+    font-size: 1.5em;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .nav {
+    padding-bottom: 15px;
+  }
+  .show-headers{
+    font-size: 1.5em;
+  }
+  .show-background{
+    height: 175px;
+  }
 
 }
 /* tablets */
 @media only screen and (min-width: 768px){
+  .container-links{
+    font-size: 2em;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .nav {
+    padding-bottom: 35px;
+  }
+  .show-headers{
+    font-size: 2em;
+  }
+  .show-background{
+    height: 200px;
+  }
 
 }
 /* laptops    */
 @media only screen and (min-width: 992px) {
-
+  .container-links{
+    font-size: 3em;
+  }
+  .title {
+    font-size: 4em;
+  }
+  .nav {
+    padding-bottom: 45px;
+  }
+  .show-headers{
+    font-size: 3em;
+  }
+  .show-background{
+    height: 300px;
+  }
 }
 /* large screen */
 @media only screen and (min-width: 1200px) {
-
+  .container-links{
+    font-size: 4em;
+  }
+  .title {
+    font-size: 5em;
+  }
+  .nav {
+    padding-bottom: 65px;
+  }
+  .show-headers{
+    font-size: 4em;
+  }
+  .show-background{
+    height: 400px;
+  }
 }
