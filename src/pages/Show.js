@@ -66,7 +66,7 @@ function Show(props) {
             <input
                 className="button-style"
                 type="submit"
-                value="update"
+                value="Update"
                 name="submit"
             />
         </form>
@@ -74,7 +74,7 @@ function Show(props) {
         <h1 className="show-headers">{bookmark.title}</h1>
         <h2 className="show-headers">{bookmark.url}</h2>
         </div>
-        <button onClick={removeBookmark}id="delete" className="button-style">Delete Bookmark</button>
+        <button onClick={removeBookmark}id="delete" className="button-style">Delete</button>
         
     </section>
 } 

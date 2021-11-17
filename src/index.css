@@ -35,8 +35,28 @@ code {
   color: #F9E07F;
 }
 .button-style{
+  background-color: #F9E07F;
+  /* #264D59 */
+  /* #43978d */
+  border: none;
+  color: #264D59;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+
 
 }
+
+.button-style:hover {
+  background-color: #F9AD6A;
+  color: white;
+}
+
 .title{
   color: #F9E07F;
   text-decoration: none;
