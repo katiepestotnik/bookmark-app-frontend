@@ -72,7 +72,7 @@ function Show(props) {
         </form>
         <div className="show-background">
         <h1 className="show-headers">{bookmark.title}</h1>
-        <h2 className="show-headers">{bookmark.url}</h2>
+        <h2 className="show-headers"><a href={bookmark.url} target="_blank" rel="noreferrer">{bookmark.url}</a></h2>
         </div>
         <button onClick={removeBookmark}id="delete" className="button-style">Delete</button>
         

@@ -69,6 +69,10 @@ code {
   background: linear-gradient(#264D59, #43978D, #264D59);
   height: 100vh;
 }
+a {
+  text-decoration: none;
+  color: #27505A;
+}
 .show-headers{
   background: linear-gradient(#F9E07F,#F9AD6A 10%, #F9E07F);
   color: #264D59;
