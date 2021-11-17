@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -41,7 +41,7 @@ code {
   color: #F9E07F;
   text-decoration: none;
   font-size: 2em;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Yuji Syuku', serif;
   display: inline-block;
   padding-bottom: 10px;
 }
@@ -56,6 +56,7 @@ code {
   width: 60%;
   margin: 10 auto;
   border-radius: 10px;
+  font-family: 'Yuji Syuku', serif;
 }
 .show-background{
   height: 150px;
@@ -80,7 +81,7 @@ code {
   text-decoration:none;
   color: #264D59;
   font-size: 1em;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Yuji Syuku', serif;
 }
 /* phones */
 @media only screen and (min-width: 576px){
