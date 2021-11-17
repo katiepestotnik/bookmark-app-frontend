@@ -135,7 +135,7 @@ a {
   }
 
   .button-style{
-    display: flex;
+    margin: auto;
   }
 
 
@@ -159,6 +159,9 @@ a {
   .show-background{
     height: 200px;
   }
+  .button-style{
+    display: flex;
+  }
 
 }
 /* laptops    */
@@ -178,6 +181,9 @@ a {
   .show-background{
     height: 300px;
   }
+  .button-style{
+    display: flex;
+  }
 }
 /* large screen */
 @media only screen and (min-width: 1200px) {
@@ -195,5 +201,8 @@ a {
   }
   .show-background{
     height: 400px;
+  }
+  .button-style{
+    display: flex;
   }
 }
