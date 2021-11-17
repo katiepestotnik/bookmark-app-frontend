@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .nav {
   background: linear-gradient(#43978D, #092027);
   height: 50px;
@@ -33,7 +40,7 @@ code {
   border-right: none;
   background:#141414;
   color: #F9E07F;
-  /* display: inline; */
+  display: inline-block;
 }
 .button-style{
   background-color: #F9E07F;
@@ -127,27 +134,14 @@ a {
     height: 175px;
   }
 
+  .button-style{
+    display: flex;
+  }
+
+
 
 }
 /* tablets */
-@media only screen and (min-width: 430px){
-  .container-links{
-    font-size: 2em;
-  }
-  .title {
-    font-size: 3em;
-  }
-  .nav {
-    padding-bottom: 35px;
-  }
-  .show-headers{
-    font-size: 2em;
-  }
-  .show-background{
-    height: 200px;
-  }
-
-}
 
 @media only screen and (min-width: 768px){
   .container-links{
