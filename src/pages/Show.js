@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 //set show function to take in props
 function Show(props) {
     //first, we need to set id variable, a bookmarks variable, and an individual bookmark variable
-    
+    console.log(props)
     const id = props.match.params.id;
 
     //save bookmarks as variable to make it easier
