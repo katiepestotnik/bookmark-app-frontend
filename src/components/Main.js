@@ -7,7 +7,7 @@ import Header from "../components/Header";
 const Main = (props) => {
     //STATE to hold API data
     const [bookmark, setBookmark] = useState(null);
-    const URL = "https://bookmark-app-backend.herokuapp.com/bookmark/";
+    const URL = "https://bookmark-app-backend.herokuapp.com/";
     const getBookmark = async () => {
         const response = await fetch(URL);
         const data = await response.json();
