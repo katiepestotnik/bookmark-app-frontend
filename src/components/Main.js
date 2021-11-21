@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
+import Header from "../components/Header";
 
 const Main = (props) => {
     //STATE to hold API data
@@ -43,9 +44,11 @@ const Main = (props) => {
     };
     useEffect(() => getBookmark(), []);
     return (
+        <>
+        <Header/>
         <main>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/bookmark">
                     <Index bookmark={bookmark}
                         createBookmark={createBookmark} />
                 </Route>
@@ -61,7 +64,8 @@ const Main = (props) => {
                     )}
                 />
             </Switch>
-        </main>
+            </main>
+            </>
     );
 };
 export default Main;
