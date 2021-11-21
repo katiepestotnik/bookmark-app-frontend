@@ -1,74 +1,83 @@
-//import dependencies
-import { useState } from "react";
-import {Link} from "react-router-dom"
+// Show.js
 
-//create a function that will take in props
-function Index(props) {
-    //create state to hold bookmark data
-    const [newBookmark, setBookmark] = useState({
-        title: "",
-        url: "",
-  });
-//   create handleChange function for bookmarks
-  const handleChange = (event) => {
-      setBookmark({ ...newBookmark, [event.target.name]: event.target.value });
-  };
+// import dependencies
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-  //create handle submit function for bookmarks
-  //BONUS lab feature - reset bookmark input field in "form" 
-  //to clear after creating the new bookmark
-  const handleSubmit = (event) => {
-    event.preventDefault(); //prevent refresh
-    props.createBookmark(newBookmark);
-    setBookmark({
-        title: "",
-        url: "",
-    });
-  };
 
- //next, loaded fxn
-  const loaded = () => {
-    return <section className="container">{props.bookmark.map((bookmark) => (
-      <div key={bookmark._id}>
-        <Link to={`/bookmark/${bookmark._id}`} className="container-links"><h1>{bookmark.title}</h1></Link>
-      </div>
-      ))
-      }
-      </section>
-  };
-
-  //loading function
-  const loading = () => {
-    return <h1>One moment, loading...</h1>;
-  };
-
-  //want to return the title and url of new bookmark
-  return (
-    <section className="full-page-style">
-      <form onSubmit={handleSubmit}>
-        <input
-          className="input-style"
-          type="text"
-          value={newBookmark.title}
-          name="title"
-          placeholder="title"
-          onChange={handleChange}
-        />
-        <input
-          className="input-style"
-          type="text"
-          value={newBookmark.url}
-          name="url"
-          placeholder="url"
-          onChange={handleChange}
-        />
+//set show function to take in props
+function Show(props) {
+    //first, we need to set id variable, a bookmarks variable, and an individual bookmark variable
     
-        <input className="button-style"type="submit" value="Add Bookmark" />
-      </form>
-      {props.bookmark ? loaded() : loading()}
-    </section>
-  );
-}
+    const id = props.match.params.id;
 
-//export
-export default Index;
+    //save bookmarks as variable to make it easier
+    const bookmarks = props.bookmark;
+
+    //we are in the Show function, so now find the individual bookmark to show
+    const bookmark = bookmarks.find((specificBookmark) => {
+        return specificBookmark._id === id //gives a boolean
+    });
+    //since we know the bookmark to edit, we can pass that in
+    const [editBookmark, setEditBookmark] = useState(bookmark);
+
+    //handle change function
+    const handleChange = (event) => {
+        setEditBookmark({
+        ...editBookmark, [event.target.name]: event.target.value
+        });
+    };
+
+    //handle submit function
+    const handleSubmit = (event) => {
+        event.preventDefault() //prevents page refresh
+        props.updateBookmark(editBookmark, bookmark._id);
+        props.history.push('/'); //back to index
+    }
+
+    //remove a bookmark
+    const removeBookmark = () => {
+        props.deleteBookmark(bookmark._id);
+        props.history.push('/'); //back to index
+    }
+
+    //goals - create div that can be targeted for styling, 
+    //with displayed bookmark info, i.e. a few static headers
+    //add a button option for removing bookmark
+    //on submit, want to edit values of title and url to update bookmark
+    return <section className='full-page-style'>
+        <form onSubmit={handleSubmit}>
+            <input
+                className="input-style"
+                type="text"
+                value={editBookmark.title}
+                name="title"
+                placeholder="title"
+                onChange={handleChange}
+            />
+            <input
+                className="input-style"
+                type="text"
+                value={editBookmark.url}
+                name="url"
+                placeholder="url"
+                onChange={handleChange}
+            />
+            <input
+                className="button-style"
+                type="submit"
+                value="Update"
+                name="submit"
+            />
+        </form>
+        <div className="show-background">
+        <h1 className="show-headers">{bookmark.title}</h1>
+        <h2 className="show-headers"><a href={bookmark.url} target="_blank" rel="noreferrer">{bookmark.url}</a></h2>
+        </div>
+        <button onClick={removeBookmark}id="delete" className="button-style">Delete</button>
+        
+    </section>
+} 
+    
+export default Show
+
