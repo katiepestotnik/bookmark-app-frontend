@@ -17,8 +17,8 @@ function App() {
             <Home />
           </Route>
           <Route
-            path="/signup">
-            render={(rp) => <Signup {...rp}/>}
+            path="/signup"
+            render={(rp) => <Signup {...rp}/>}>
           </Route>
           <Route
             path="/login"

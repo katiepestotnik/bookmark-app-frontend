@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Context } from "../Global";
 import { useContext } from 'react';
-import Home from "./Home";
+import Header from "../components/Header";
 const Signup = (props) => {
-    const { state, setState }=useContext(Context);
+    const [state, setState] = useContext(Context);
     const [form, setForm] = useState({
         username: '',
         password: ''
@@ -29,19 +29,23 @@ const Signup = (props) => {
                 username: '',
                 password: ''
             });
-            //not sure this is where i want to push after login test**
             props.history.push('/login')
         });
     }
-    return (<div>
+    return (<div className="full-page-style">
+        <Header/>
         <form onSubmit={handleSubmit}>
             <input
                 type="text" name="username" value={form.username}
-                onChange={handleChange}></input>
+                onChange={handleChange}
+                className="input-style"></input>
             <input
                 type="password" name="password" value={form.password}
-                onChange={handleChange}></input>
-            <input type="submit" value="SIGNUP"></input>
+                onChange={handleChange}
+                className="input-style"></input>
+            <input
+                className="button-style"
+                type="submit" value="SIGNUP"></input>
         </form>
     </div>)
 };

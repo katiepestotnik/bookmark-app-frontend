@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Context } from "../Global";
-import Home from "./Home"
 import { useContext } from 'react';
+import Header from "../components/Header";
+
 const Login = (props) => {
     const [state, setState] = useContext(Context);
     const [form, setForm] = useState({
@@ -32,15 +33,18 @@ const Login = (props) => {
             props.history.push('/bookmark')
         });
     }
-    return (<div>
+    return (<div className="full-page-style">
+        <Header/>
         <form onSubmit={handleSubmit}>
             <input
                 type="text" name="username" value={form.username}
-                onChange={handleChange}></input>
+                onChange={handleChange}
+                className="input-style"></input>
             <input
                 type="password" name="password" value={form.password}
-                onChange={handleChange}></input>
-            <input type="submit" value="LOGIN"></input>
+                onChange={handleChange}
+                className="input-style"></input>
+            <input className="button-style"type="submit" value="LOGIN"></input>
         </form>
     </div>)
 };
