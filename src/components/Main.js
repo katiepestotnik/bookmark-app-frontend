@@ -1,17 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Index from '../pages/Index';
 import Show from '../pages/Show';
 import Header from "../components/Header";
+import { Context } from "../Global";
 
 const Main = (props) => {
+    //global state
+    const [state, setState] = useContext(Context);
     //STATE to hold API data
     const [bookmark, setBookmark] = useState(null);
-    const URL = "https://bookmark-app-backend.herokuapp.com/";
+    const URL = "http://localhost:3000";
     const getBookmark = async () => {
-        const response = await fetch(URL);
+        const response = await fetch(URL + "/bookmark/", {
+            method: 'get',
+            headers: {
+                Authorization: "bearer " + state.token,
+                "Content-Type": "application/json",
+                "Accept":"application/json"
+            }
+        });
+        console.log(`this is response${response}`)
         const data = await response.json();
+        console.log(`this is ${data}`)
         setBookmark(data);
+        console.log(`this is bookmark${bookmark}`)
     };
     //Create with POST Bookmark
     const createBookmark = async (mark) => {
