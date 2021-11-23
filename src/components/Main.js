@@ -10,6 +10,8 @@ const Main = (props) => {
     const [state, setState] = useContext(Context);
     console.log("this is state", state)
     const { url, token } = state;
+    //id for redirect
+    const [updateId, setUpdateId] = useState(null);
     //STATE to hold API data
     const [bookmark, setBookmark] = useState(null);
     const getBookmark = async () => {
@@ -54,7 +56,6 @@ const Main = (props) => {
         }).then(response => response.json()).then(data => {
             getBookmark();
         })
-
     };
     //Delete with DELETE Bookmark
     const deleteBookmark = async (id) => {

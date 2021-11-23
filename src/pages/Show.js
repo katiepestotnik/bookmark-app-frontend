@@ -32,13 +32,13 @@ function Show(props) {
     const handleSubmit = (event) => {
         event.preventDefault() //prevents page refresh
         props.updateBookmark(editBookmark, bookmark._id);
-        props.history.push('/'); //back to index
+        props.history.push('/bookmark'); //back to index
     }
 
     //remove a bookmark
     const removeBookmark = () => {
         props.deleteBookmark(bookmark._id);
-        props.history.push('/'); //back to index
+        props.history.push('/bookmark'); //back to index
     }
 
     //goals - create div that can be targeted for styling, 

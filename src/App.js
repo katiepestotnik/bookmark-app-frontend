@@ -24,8 +24,9 @@ function App() {
             path="/login"
             render={(rp) => <Login {...rp}/>}>
           </Route>
-          <Route path="/bookmark">
-            <Main/>
+          <Route
+            path="/bookmark"
+            render={(rp)=><Main {...rp}/>}>
           </Route>
       </Switch>
       </main>
