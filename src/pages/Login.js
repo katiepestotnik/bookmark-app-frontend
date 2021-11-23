@@ -22,15 +22,16 @@ const Login = (props) => {
             },
             body: JSON.stringify({ username, password })
         }).then(response => response.json()).then(data => {
-            console.log("token is:", data);
+            console.log("token is:", data.token);
             //store token for refresh
-            window.localStorage.setItem("token", JSON.stringify(data));
+            window.localStorage.setItem("token", JSON.stringify(data.token));
             setState({ ...state, token: data.token });
             setForm({
                 username: '',
                 password: ''
             });
             props.history.push('/bookmark')
+            console.log(state)
         });
     }
     return (<div className="full-page-style">
