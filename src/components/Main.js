@@ -29,10 +29,12 @@ const Main = (props) => {
     };
     //Create with POST Bookmark
     const createBookmark = async (mark) => {
-        await fetch(URL, {
+        await fetch(url, {
             method: "post",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                Authorization: "bearer " + token,
+                "Accept":"application/json"
             },
             body: JSON.stringify(mark)
         });
