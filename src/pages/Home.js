@@ -8,13 +8,13 @@ const Home = (props) => {
     //if token show login else signup
     const [state, setState] = useContext(Context);
     //check for token
-    useEffect(() => {
-        const token = JSON.parse(window.localStorage.getItem("token"));
-        console.log(token);
-        if (token) {
-            setState({ ...state, token: token.token })
-        }
-    }, []);
+    // useEffect(() => {
+    //     const token = JSON.parse(window.localStorage.getItem("token"));
+    //     console.log(token);
+    //     if (token) {
+    //         setState({ ...state, token: token.token })
+    //     }
+    // }, []);
     const logout = <Link to="/">
         <button onClick={() => {
             window.localStorage.removeItem("token")

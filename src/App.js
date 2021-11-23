@@ -5,10 +5,23 @@ import Home from './pages/Home';
 import Signup from "./pages/Signup";
 import Login from './pages/Login'
 import { Switch, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 //bring inital state for token and url
 import Global from "./Global";
 
 function App() {
+  const [state, setState] = useState({
+    url: "https://bookmark-app-backend.herokuapp.com/",
+    token: null
+  });
+  //check login
+  useEffect(() => {
+    const token = JSON.parse(window.localStorage.getItem("token"))
+    console.log(token)
+    if (token) {
+      setState({ ...state, token: token.token })
+    }
+  },[])
   return (
     <Global className="App full-page-style">
       <main>
