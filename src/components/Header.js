@@ -14,10 +14,7 @@ const Header = (props) => {
     return (
         <div className="nav-background">
         <nav className="nav">
-            <Link to="/bookmark"
-            className="title">
-                <div >Bookmark'd</div>
-                </Link>
+                <div className="title">Bookmark'd</div>
                 <Link to="/">{state.token?logout:null}</Link>
             </nav>
         </div>
