@@ -26,8 +26,9 @@ function App() {
     <Global className="App full-page-style">
       <main>
         <Switch>
-          <Route exact path="/">
-            <Home />
+          <Route
+            exact path="/"
+            render={(rp)=>state.token?<Main/>:<Home/>}>
           </Route>
           <Route
             path="/signup"
