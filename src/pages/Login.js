@@ -26,12 +26,13 @@ const Login = (props) => {
             //store token for refresh
             window.localStorage.setItem("token", JSON.stringify(data.token));
             setState({ ...state, token: data.token });
+            console.log(state)
             setForm({
                 username: '',
                 password: ''
             });
             props.history.push('/bookmark')
-            console.log(state)
+
         });
     }
     return (<div className="full-page-style">
