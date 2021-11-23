@@ -29,7 +29,7 @@ const Main = (props) => {
     };
     //Create with POST Bookmark
     const createBookmark = async (mark) => {
-        await fetch(url, {
+        fetch(url + "/bookmark/", {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
@@ -37,26 +37,35 @@ const Main = (props) => {
                 "Accept":"application/json"
             },
             body: JSON.stringify(mark)
-        });
-        getBookmark();
+        }).then(response => response.json()).then(data => {
+            getBookmark();
+        })
+
     };
     //Update with PUT Bookmark
     const updateBookmark = async (mark, id) => {
-        await fetch(URL + id, {
+        fetch(url + "/bookmark/" + id, {
             method: "put",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                Authorization: `bearer ${token}`
             },
             body: JSON.stringify(mark)
-        });
-        getBookmark();
+        }).then(response => response.json()).then(data => {
+            getBookmark();
+        })
+
     };
     //Delete with DELETE Bookmark
     const deleteBookmark = async (id) => {
-        await fetch(URL + id, {
-            method: "delete"
+        fetch(url + "/bookmark/" + id, {
+            method: "delete",
+            headers: {
+                Authorization: `bearer ${token}`
+            },
+        }).then(response => response.json()).then(data => {
+            getBookmark();
         });
-        getBookmark();
     };
     useEffect(() => getBookmark(), []);
     return (
